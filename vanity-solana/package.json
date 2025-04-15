@@ -1,0 +1,60 @@
+{
+  "name": "vanity-solana",
+  "version": "1.0.6",
+  "description": "Vanity Solana Address Generator. Generate a Solana address starting or ending with any letter or phrase.",
+  "license": "ISC",
+  "homepage": "https://github.com/m2-labs/vanity-solana",
+  "engines": {
+    "node": ">= 12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m2-labs/vanity-solana.git"
+  },
+  "author": {
+    "name": "M2 Labs",
+    "url": "https://m2.xyz"
+  },
+  "contributors": [
+    {
+      "name": "Brice Stacey",
+      "email": "brice@m2.xyz"
+    },
+    {
+      "name": "Matt Venables",
+      "email": "matt@m2.xyz"
+    }
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "vanity-solana": "./dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node lib/index.ts",
+    "format": "prettier  --write .",
+    "lint": "eslint . --ext .ts",
+    "prepublish": "npm run build",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.30.2",
+    "chalk": "^4.1.2",
+    "commander": "^8.3.0",
+    "ora": "^5.4.1",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6",
+    "@types/qrcode-terminal": "^0.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.2.0",
+    "@typescript-eslint/parser": "^5.2.0",
+    "eslint": "^8.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.2",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  }
+}
